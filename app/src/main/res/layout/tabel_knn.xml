@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/layout_knnnnn"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/knn_rank"
+            android:layout_width="35dp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Rank"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:background="@drawable/border_header"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/knn_kode"
+            android:textAlignment="center"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Kode"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:background="@drawable/border_right"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/knn_jenis"
+            android:textAlignment="center"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Jenis Kelayakan"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:background="@drawable/border_right"
+            android:textColor="#000"/>
+
+        <TextView
+            android:id="@+id/knn_nilai"
+            android:textAlignment="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:text="Nilai"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:background="@drawable/border_right"
+            android:textColor="#000"/>
+    </LinearLayout>
+
+</LinearLayout>

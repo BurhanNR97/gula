@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Uji">
+    <item
+        android:id="@+id/menu_tambahuji"
+        android:orderInCategory="0"
+        android:title="Input Gambar"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_camera_alt_24"
+
+        />
+</menu>

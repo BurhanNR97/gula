@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:background="@drawable/border_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="#"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:background="@drawable/border_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jenis Kelayakan"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:textAlignment="center"
+                android:padding="5dp"
+                android:background="@drawable/border_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Persentasi"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_field"
+                android:padding="5dp"
+                android:text=" 1 "
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/jenis1"
+                android:padding="5dp"
+                android:background="@drawable/border_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/persen1"
+                android:padding="5dp"
+                android:background="@drawable/border_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_field"
+                android:padding="5dp"
+                android:text=" 2 "
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/jenis2"
+                android:padding="5dp"
+                android:background="@drawable/border_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/persen2"
+                android:padding="5dp"
+                android:background="@drawable/border_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

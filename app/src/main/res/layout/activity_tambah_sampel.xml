@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containerSampel"
+    android:layout_height="match_parent"
+    tools:context=".TambahSampel"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:background="@drawable/rounded_corner">
+
+        <FrameLayout
+            android:padding="10dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@drawable/border_line_dotted">
+
+            <ImageView
+                android:id="@+id/addSampel_img"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="true"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                style="@style/parent">
+                <EditText
+                    android:id="@+id/addSampel_kode"
+                    style="@style/modifiedEditText"
+                    android:textSize="16sp"
+                    android:hint="Kode Sampel"
+                    android:maxLines="1"
+                    android:focusable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:entries="@array/jenis"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_input"
+                android:id="@+id/addSampel_jenis"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                style="@style/parent">
+                <EditText
+                    android:textSize="16sp"
+                    android:id="@+id/addSampel_hue"
+                    style="@style/modifiedEditText"
+                    android:hint="Nilai Hue"
+                    android:maxLines="1"
+                    android:focusable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                style="@style/parent">
+                <EditText
+                    android:id="@+id/addSampel_sat"
+                    android:textSize="16sp"
+                    style="@style/modifiedEditText"
+                    android:hint="Nilai Saturation"
+                    android:maxLines="1"
+                    android:focusable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                style="@style/parent">
+                <EditText
+                    android:id="@+id/addSampel_val"
+                    android:textSize="16sp"
+                    style="@style/modifiedEditText"
+                    android:hint="Nilai Value"
+                    android:maxLines="1"
+                    android:focusable="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addSampel_simpan"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="SIMPAN"
+                android:background="@drawable/btn_hijau"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/addSampel_batal"
+                android:layout_marginLeft="10dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="BATAL"
+                android:background="@drawable/btn_abu"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

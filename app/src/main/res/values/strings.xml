@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Kelayakan Gula</string>
+    <string-array name="jenis">
+        <item>- Pilih Jenis -</item>
+        <item>Layak</item>
+        <item>Tidak Layak</item>
+    </string-array>
+</resources>

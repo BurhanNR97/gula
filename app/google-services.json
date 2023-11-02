@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "842374957637",
+    "firebase_url": "https://kelayakan-gula-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "kelayakan-gula",
+    "storage_bucket": "kelayakan-gula.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842374957637:android:d7ccb38018feac17ceb12c",
+        "android_client_info": {
+          "package_name": "com.layak.gula"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClr3fODfmRPWsHRpvisDqJJQGMdzNFfhU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
