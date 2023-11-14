@@ -84,7 +84,12 @@ public class Login extends AppCompatActivity {
                                             finish();
                                         } else
                                         if (model.getLevel() == 0) {
-                                            Toast.makeText(Login.this, "Admin", Toast.LENGTH_SHORT).show();
+                                            Intent intent = new Intent(Login.this, admin.class);
+                                            intent.putExtra("nik", model.getNik());
+                                            intent.putExtra("nama", model.getNama());
+                                            overridePendingTransition(R.anim.from_left, R.anim.to_right);
+                                            startActivity(intent);
+                                            finish();
                                         }
                                     }
                                 }

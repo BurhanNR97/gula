@@ -20,6 +20,15 @@
         android:theme="@style/Theme.KelayakanGula"
         tools:targetApi="31">
         <activity
+            android:name=".Rekapp"
+            android:exported="false" />
+        <activity
+            android:name=".AkunPengguna"
+            android:exported="false" />
+        <activity
+            android:name=".admin"
+            android:exported="false" />
+        <activity
             android:name=".Rekap"
             android:exported="false" />
         <activity

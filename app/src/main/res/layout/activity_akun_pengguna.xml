@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Rekap">
+    tools:context=".Sampel">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar_rekap"
+            android:id="@+id/toolbar_akun"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/white"
@@ -31,10 +31,10 @@
             android:divider="@android:color/transparent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/rvRekap"/>
+            android:id="@+id/rvAkun"/>
 
         <com.airbnb.lottie.LottieAnimationView
-            android:id="@+id/kosong_rekap"
+            android:id="@+id/kosong_akun"
             app:lottie_rawRes="@raw/anim_kosong"
             app:lottie_autoPlay="true"
             android:layout_centerInParent="true"
@@ -42,6 +42,19 @@
             android:layout_marginBottom="30dp"
             android:layout_width="200dp"
             android:layout_height="200dp"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="@color/register_bk_color"
+            android:elevation="0dp"
+            app:elevation="0dp"
+            android:id="@+id/fabAkun"
+            android:src="@drawable/baseline_add_24"/>
     </RelativeLayout>
 
 </LinearLayout>
