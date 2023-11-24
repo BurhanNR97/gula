@@ -24,8 +24,8 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class admin extends AppCompatActivity {
-    TextView jmlAkun, jmlRekap;
-    CardView rekap, akun;
+    TextView jmlAkun, jmlRekap, jmlSampel;
+    CardView rekap, akun, sampel;
     AppCompatButton logout;
 
     @SuppressLint("MissingInflatedId")
@@ -48,6 +48,8 @@ public class admin extends AppCompatActivity {
         rekap = findViewById(R.id.cvRekapp);
         akun = findViewById(R.id.cvAkun);
         logout = findViewById(R.id.btnLogout);
+        sampel = findViewById(R.id.cvSampel);
+        jmlSampel = findViewById(R.id.jml_sampel);
 
         rekap.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,6 +69,19 @@ public class admin extends AppCompatActivity {
                 Intent intent = new Intent(admin.this, AkunPengguna.class);
                 intent.putExtra("nik", getIntent().getStringExtra("nik"));
                 intent.putExtra("nama", getIntent().getStringExtra("nama"));
+                overridePendingTransition(R.anim.from_left, R.anim.to_right);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        sampel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(admin.this, Sampel.class);
+                intent.putExtra("nik", getIntent().getStringExtra("nik"));
+                intent.putExtra("nama", getIntent().getStringExtra("nama"));
+                intent.putExtra("c", getIntent().getStringExtra("c"));
                 overridePendingTransition(R.anim.from_left, R.anim.to_right);
                 startActivity(intent);
                 finish();
@@ -117,6 +132,17 @@ public class admin extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 jmlRekap.setText(String.valueOf(snapshot.getChildrenCount()));
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        db.child("sampel").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                jmlSampel.setText(String.valueOf(snapshot.getChildrenCount()));
             }
 
             @Override

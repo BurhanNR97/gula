@@ -81,6 +81,7 @@ public class Rekapp extends AppCompatActivity implements AdapterView.OnItemClick
         Intent intent = new Intent(Rekapp.this, admin.class);
         intent.putExtra("nik", getIntent().getStringExtra("nik"));
         intent.putExtra("nama", getIntent().getStringExtra("nama"));
+        intent.putExtra("c", getIntent().getStringExtra("c"));
         overridePendingTransition(R.anim.from_right, R.anim.to_left);
         startActivity(intent);
         finish();

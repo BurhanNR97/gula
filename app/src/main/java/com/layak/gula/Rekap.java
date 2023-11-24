@@ -72,6 +72,7 @@ public class Rekap extends AppCompatActivity {
         Intent intent = new Intent(Rekap.this, MainActivity.class);
         intent.putExtra("nik", getIntent().getStringExtra("nik"));
         intent.putExtra("nama", getIntent().getStringExtra("nama"));
+        intent.putExtra("c", getIntent().getStringExtra("c"));
         overridePendingTransition(R.anim.from_right, R.anim.to_left);
         startActivity(intent);
         finish();

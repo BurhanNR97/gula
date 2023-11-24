@@ -79,6 +79,7 @@ public class Login extends AppCompatActivity {
                                             Intent intent = new Intent(Login.this, MainActivity.class);
                                             intent.putExtra("nik", model.getNik());
                                             intent.putExtra("nama", model.getNama());
+                                            intent.putExtra("c", "user");
                                             overridePendingTransition(R.anim.from_left, R.anim.to_right);
                                             startActivity(intent);
                                             finish();
@@ -87,6 +88,7 @@ public class Login extends AppCompatActivity {
                                             Intent intent = new Intent(Login.this, admin.class);
                                             intent.putExtra("nik", model.getNik());
                                             intent.putExtra("nama", model.getNama());
+                                            intent.putExtra("c", "admin");
                                             overridePendingTransition(R.anim.from_left, R.anim.to_right);
                                             startActivity(intent);
                                             finish();

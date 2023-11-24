@@ -108,6 +108,7 @@ public class Uji extends AppCompatActivity {
         Intent intent = new Intent(Uji.this, MainActivity.class);
         intent.putExtra("nik", getIntent().getStringExtra("nik"));
         intent.putExtra("nama", getIntent().getStringExtra("nama"));
+        intent.putExtra("c", getIntent().getStringExtra("c"));
         overridePendingTransition(R.anim.from_right, R.anim.to_left);
         startActivity(intent);
         finish();
@@ -276,7 +277,7 @@ public class Uji extends AppCompatActivity {
                             for (int x=0; x<k; x++) {
                                 int no = x + 1;
 
-                                if (knn_hsv[x][1].equals("Layak")) {
+                                if (knn_hsv[x][1].equals("Gula Rafinasi")) {
                                     jmlLayak++;
                                 } else {
                                     jmlTidak++;
@@ -291,10 +292,10 @@ public class Uji extends AppCompatActivity {
                             tampilKNN.setAdapter(adapterKNN);
 
                             if (jmlLayak == jmlTidak) {
-                                if (knn_hsv[0][1].equals("Layak")) {
-                                    hasill = "50% Layak";
+                                if (knn_hsv[0][1].equals("Gula Rafinasi")) {
+                                    hasill = "50% Gula Rafinasi";
                                 } else {
-                                    hasill = "50% Tidak Layak";
+                                    hasill = "50% Gula Non-Rafinasi";
                                 }
                             } else {
                                 float nilaiK = k * 1f;
@@ -305,22 +306,22 @@ public class Uji extends AppCompatActivity {
 
                                 if (target <= 1.00000) {
                                     if (jmlLayak > jmlTidak) {
-                                        model.setHasil("Layak");
+                                        model.setHasil("Gula Rafinasi");
                                         model.setPersen(hasilLayak);
-                                        hJ1.setText("Layak");
+                                        hJ1.setText("Gula Rafinasi");
                                         pJ1.setText(koma2(hasilLayak) + " %");
-                                        hJ2.setText("Tidak Layak");
+                                        hJ2.setText("Gula Non-Rafinasi");
                                         pJ2.setText(koma2(hasilTidak) + " %");
-                                        hasill = koma2(hasilLayak) + "% Layak";
+                                        hasill = koma2(hasilLayak) + "% Gula Rafinasi";
                                     } else
                                     if (jmlLayak < jmlTidak) {
-                                        model.setHasil("Tidak Layak");
+                                        model.setHasil("Gula Non-Rafinasi");
                                         model.setPersen(hasilTidak);
-                                        hJ2.setText("Layak");
+                                        hJ2.setText("Gula Rafinasi");
                                         pJ2.setText(koma2(hasilLayak) + " %");
-                                        hJ1.setText("Tidak Layak");
+                                        hJ1.setText("Gula Non-Rafinasi");
                                         pJ1.setText(koma2(hasilTidak) + " %");
-                                        hasill = koma2(hasilTidak) + "% Tidak Layak";
+                                        hasill = koma2(hasilTidak) + "% Gula Non-Rafinasi";
                                     }
                                     teksHasil.setText(hasill);
                                 } else {

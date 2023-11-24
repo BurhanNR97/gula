@@ -2,8 +2,8 @@
     <string name="app_name">Kelayakan Gula</string>
     <string-array name="jenis">
         <item>- Pilih Jenis -</item>
-        <item>Layak</item>
-        <item>Tidak Layak</item>
+        <item>Gula Rafinasi</item>
+        <item>Gula Non-Rafinasi</item>
     </string-array>
 
     <string-array name="level">

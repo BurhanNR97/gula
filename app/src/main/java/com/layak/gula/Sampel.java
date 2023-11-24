@@ -74,6 +74,7 @@ public class Sampel extends AppCompatActivity implements AdapterView.OnItemClick
                 Intent intent = new Intent(Sampel.this, TambahSampel.class);
                 intent.putExtra("nik", getIntent().getStringExtra("nik"));
                 intent.putExtra("nama", getIntent().getStringExtra("nama"));
+                intent.putExtra("c", getIntent().getStringExtra("c"));
                 overridePendingTransition(R.anim.from_left, R.anim.to_right);
                 startActivity(intent);
                 finish();
@@ -97,9 +98,16 @@ public class Sampel extends AppCompatActivity implements AdapterView.OnItemClick
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        Intent intent = new Intent(Sampel.this, MainActivity.class);
+        Intent intent = null;
+        if (getIntent().getStringExtra("c").equals("admin")) {
+            intent = new Intent(Sampel.this, admin.class);
+        } else
+        if (getIntent().getStringExtra("c").equals("user")) {
+            intent = new Intent(Sampel.this, MainActivity.class);
+        }
         intent.putExtra("nik", getIntent().getStringExtra("nik"));
         intent.putExtra("nama", getIntent().getStringExtra("nama"));
+        intent.putExtra("c", getIntent().getStringExtra("c"));
         overridePendingTransition(R.anim.from_right, R.anim.to_left);
         startActivity(intent);
         finish();
