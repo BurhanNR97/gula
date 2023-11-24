@@ -60,6 +60,7 @@ public class admin extends AppCompatActivity {
                 Intent intent = new Intent(admin.this, Rekapp.class);
                 intent.putExtra("nik", getIntent().getStringExtra("nik"));
                 intent.putExtra("nama", getIntent().getStringExtra("nama"));
+                intent.putExtra("c", getIntent().getStringExtra("c"));
                 overridePendingTransition(R.anim.from_left, R.anim.to_right);
                 startActivity(intent);
                 finish();
@@ -72,6 +73,7 @@ public class admin extends AppCompatActivity {
                 Intent intent = new Intent(admin.this, AkunPengguna.class);
                 intent.putExtra("nik", getIntent().getStringExtra("nik"));
                 intent.putExtra("nama", getIntent().getStringExtra("nama"));
+                intent.putExtra("c", getIntent().getStringExtra("c"));
                 overridePendingTransition(R.anim.from_left, R.anim.to_right);
                 startActivity(intent);
                 finish();
