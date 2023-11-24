@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class admin extends AppCompatActivity {
-    TextView jmlAkun, jmlRekap, jmlSampel;
+    TextView jmlAkun, jmlRekap, jmlSampel, nama;
     CardView rekap, akun, sampel;
     AppCompatButton logout;
 
@@ -50,6 +50,9 @@ public class admin extends AppCompatActivity {
         logout = findViewById(R.id.btnLogout);
         sampel = findViewById(R.id.cvSampel);
         jmlSampel = findViewById(R.id.jml_sampel);
+
+        nama = findViewById(R.id.namaAkunn);
+        nama.setText(getIntent().getStringExtra("nama"));
 
         rekap.setOnClickListener(new View.OnClickListener() {
             @Override
